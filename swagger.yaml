@@ -1,0 +1,54 @@
+swagger: '2.0'
+info:
+  title: weather-service
+  version: 0.0.1
+  description: weather-service
+  x-ibm-name: weather-service
+paths:
+  /init:
+    get:
+      description: weather-service  app
+      operationId: init
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "Success"
+        "405":
+          description: "Invalid input"
+        "404":
+          description: "Not Found"
+    post:
+      description: weather-service  app
+      operationId: create
+      consumes:
+      - "application/text"
+      produces:
+      - "application/text"
+      responses:
+        "200":
+          description: "Success"
+  /weather:
+    get:
+      operationId: weather
+      responses:
+        '200':
+          description: The operation was successful.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      description: List weather-service
+schemes:
+  - http
+x-ibm-configuration:
+  type: rest
+  phase: realized
+  enforced: true
+  testable: true
+  cors:
+    enabled: true
+host: weather-service-orders-git-openshift.itzroks-663002b1mb-xbphnt-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud
+

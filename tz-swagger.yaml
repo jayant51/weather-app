@@ -1,0 +1,74 @@
+swagger: '2.0'
+info:
+  title: Hello Math World
+  version: 0.0.1
+  description: helloMathWorld
+  x-ibm-name: helloMathWorld
+paths:
+  /init:
+    get:
+      description: Hello math World app
+      operationId: helloworld
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "Success"
+        "405":
+          description: "Invalid input"
+        "404":
+          description: "Not Found"
+    post:
+      description: Hello math World app
+      operationId: create
+      consumes:
+      - "application/text"
+      produces:
+      - "application/text"
+      responses:
+        "200":
+          description: "Success"
+  /multiply:
+    post:
+      operationId: multiplyNumbers
+      responses:
+        '200':
+          description: The operation was successful.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      description: Multiply two Numbers
+      parameters:
+        - name: body
+          in: body
+          schema:
+            $ref: '#/definitions/numbers'
+          description: The request body for the operation
+          required: true
+  /square/5:
+    get:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "Success"
+        "405":
+          description: "Invalid input"
+        "404":
+          description: "Not Found"
+definitions:
+  numbers:
+    type: object
+    properties:
+      num1:
+        type: integer
+      num2:
+        type: integer
+schemes:
+  - http
+host: hello-math-app-git-openshift.itzroks-663002b1mb-xbphnt-6ccd7f378ae819553d37d5f2ee142bd6-0000.us-south.containers.appdomain.cloud

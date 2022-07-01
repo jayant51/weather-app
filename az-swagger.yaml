@@ -1,0 +1,62 @@
+---
+swagger: '2.0'
+info:
+  title: costco order
+  version: '1.0'
+  description: costco order
+host: apim-costco-api.azure-api.net
+basePath: "/costco"
+schemes:
+- http
+- https
+securityDefinitions:
+  apiKeyQuery:
+    type: apiKey
+    name: subscription-key
+    in: query
+security:
+- apiKeyHeader: []
+- apiKeyQuery: []
+paths:
+  "/init":
+    get:
+      description: costco order types app
+      operationId: orders
+      summary: orders
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Success
+        '404':
+          description: Not Found
+        '405':
+          description: Invalid input
+    post:
+      description: costco order types app
+      operationId: create
+      summary: create
+      produces:
+      - application/text
+      responses:
+        '200':
+          description: Success
+  "/listOrderTypes":
+    get:
+      description: List Costco Orders
+      operationId: listOrderTypes
+      summary: listOrderTypes
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: The operation was successful.
+definitions:
+  numbers:
+    type: object
+    properties:
+      num1:
+        type: integer
+      num2:
+        type: integer
+tags: []
