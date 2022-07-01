@@ -1,5 +1,4 @@
 import asyncio
-import requests
 import urllib.parse
 from flask import Flask, jsonify, request
 from flask_restful import Resource, Api
