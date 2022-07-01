@@ -4,5 +4,4 @@ flask_cors==3.0.10
 json3==1.0
 requests==2.28.1
 asyncio==3.4.3
-requests==2.28.1
 urllib==3.0.1
