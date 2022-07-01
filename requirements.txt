@@ -3,4 +3,4 @@ Flask-RESTful==0.3.9
 flask_cors==3.0.10
 json3==1.0
 asyncio==3.4.3
-urllib==3.0.1
+urllib3==1.26.9

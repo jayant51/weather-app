@@ -1,5 +1,5 @@
 import asyncio
-import urllib.parse
+import urllib3.parse
 from flask import Flask, jsonify, request
 from flask_restful import Resource, Api
 from flask_cors import CORS
@@ -36,7 +36,7 @@ async def getweather():
 
     print(wresponse)
 
-    returnurl = 'https://nominatim.openstreetmap.org/search/' + urllib.parse.quote(address) +'?format=json'
+    returnurl = 'https://nominatim.openstreetmap.org/search/' + urllib3.parse.quote(address) +'?format=json'
 
     response = requests.get(returnurl).json()
     wresponse += address
