@@ -1,6 +1,5 @@
 import asyncio
-import urllib
-from urllib import parse
+import urllib.parse
 from flask import Flask, jsonify, request
 from flask_restful import Resource, Api
 from flask_cors import CORS
