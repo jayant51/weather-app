@@ -37,7 +37,7 @@ async def getweather():
 
     print(wresponse)
 
-    returnurl = 'https://nominatim.openstreetmap.org/search/' + urllib-3.parse.quote(address) +'?format=json'
+    returnurl = 'https://nominatim.openstreetmap.org/search/' + urllib.parse.quote(address) +'?format=json'
 
     response = requests.get(returnurl).json()
     wresponse += address
