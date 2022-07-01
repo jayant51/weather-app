@@ -1,4 +1,3 @@
-import python_weather
 import asyncio
 import requests, json
 import urllib.parse
