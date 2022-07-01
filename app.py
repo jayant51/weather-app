@@ -54,7 +54,7 @@ def post(self):
 
 # adding the defined resources along with their corresponding urls
 #api.add_resource(getweather, '/weather')
-api.add_resource(init, '/')
+#api.add_resource(init, '/')
 
 
 if __name__ == '__main__':
